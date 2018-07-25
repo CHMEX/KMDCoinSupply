@@ -1,25 +1,25 @@
 # KMDCoinSupply
-
+<br>
 # Bash to export the history
-
-#!/bin/bash
-for i in {0..936039}
-do
-   ./komodo-cli coinsupply $i >> fundsexport.json
-echo "," >> fundsexport.json
-done
-
+<br><br>
+#!/bin/bash<br>
+for i in {0..936039}<br>
+do<br>
+   ./komodo-cli coinsupply $i >> fundsexport.json<br>
+echo "," >> fundsexport.json<br>
+done<br>
+<br><br><br>
 
 
 # Python To Export:
 
-import json
-import csv
-
-with open('fundsexport.json', 'r') as f:
-    dicts = json.load(f)
-out = open('fundsexport.csv', 'w')
-writer = csv.DictWriter(out, dicts[0].keys())
-writer.writeheader()
-writer.writerows(dicts)
-out.close()
+import json<br>
+import csv<br>
+<br><br>
+with open('fundsexport.json', 'r') as f:<br>
+    dicts = json.load(f)<br>
+out = open('fundsexport.csv', 'w')<br>
+writer = csv.DictWriter(out, dicts[0].keys())<br>
+writer.writeheader()<br>
+writer.writerows(dicts)<br>
+out.close()<br>
